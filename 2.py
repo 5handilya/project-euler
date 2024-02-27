@@ -12,8 +12,9 @@ def fibIter(cap):
     tokens = [1,2]
     while (tokens[-1] < cap):
         evensum += tokens[-1]
-        tokens.append(tokens[-1] + tokens[-2])
-        tokens.append(tokens[-1] + tokens[-2])
-        tokens.append(tokens[-1] + tokens[-2])   
+        for i in range(3):
+            tokens.append(tokens[-1] + tokens[-2])
+            tokens.append(tokens[-1] + tokens[-2])
+            tokens.append(tokens[-1] + tokens[-2])   
 fibIter(n)
 print(evensum)
